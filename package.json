@@ -1,0 +1,16 @@
+{
+  "name": "git_clp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "mongoose": "^5.13.2"
+  }
+}
