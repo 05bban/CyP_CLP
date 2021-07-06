@@ -54,7 +54,7 @@ client.on("message", async (message) => {
             });
         }
 
-        const checkPoints = await model.findOne({ id: member.id });
+        const checkPoints = await modelo.findOne({ id: member.id });
 
         if (!checkPoints) {
             const newModel = new modelo({ id: message.author.id });
@@ -109,7 +109,7 @@ client.on("message", async (message) => {
 
         let member = message.mentions.members.first() || message.guild.members.resolve(args[0]) || message.member;
 
-        const checkPoints = await model.findOne({ id: member.id });
+        const checkPoints = await modelo.findOne({ id: member.id });
         const embed = new MessageEmbed()
             .setAuthor((member.id === message.member.id) ? `Tus puntos!` : `Puntos de ${member.displayName}!`,
                 member.user.displayAvatarURL({ dynamic: true }))
@@ -123,7 +123,7 @@ client.on("message", async (message) => {
             message.reply({ embeds: [embed] });
         }
 
-        embed.addField(`🔎 \`|\` Puntos!`, `**Militar**: ${MilitaryPoints.totalPoints}`);
+        embed.addField(`🔎 \`|\` Puntos!`, `**Militar**: ${checkPoints.totalPoints}`);
         message.reply({ embeds: [embed] });
 
     }
