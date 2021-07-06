@@ -123,7 +123,7 @@ client.on("message", async (message) => {
             message.reply({ embeds: [embed] });
         }
 
-        embed.addField(`🔎 \`|\` Puntos!`, `**Militar**: ${checkPoints.totalPoints}`);
+        embed.addField(`🔎 \`|\` Puntos!`, `**Militar**: ${checkPoints.puntosTotales}`);
         message.reply({ embeds: [embed] });
 
     }
